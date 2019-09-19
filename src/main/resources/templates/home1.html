@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Good Thymes Virtual Grocery</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../css/gtvg2.css" th:href="@{/css/home.css}" />
+</head>
+
+<body>
+	<div class="top">
+		<div class="hr"></div>
+		<div class="top2">
+			<img class="weibo-logo1" alt="logo" src="images/weibo-logo1.jpg">
+			<div class="top_search">
+				<input class="top_search_input" type="text"/> <input
+					class="top_search_button" type="button"
+					style="float: left; width: 30px; height: 30px; border: 0; background: url(images/top_search_button.jpg) no-repeat" />
+			</div>
+			<div class="top_a_href">
+				<a class="top_img_shouye" href="#">首页</a> <a class="top_img_shipin"
+					href="#">视频</a> <a class="top_img_find" href="#">发现</a> <a
+					class="top_img_game" href="#">游戏</a> <a class="top_img_username"
+					href="#">用户名</a>
+				<div class="top_img_shuxian">|</div>
+				<a class="top_img_message" href="#" th:href="@{/signupform}">注册</a>
+				<a class="top_img_shezhi" href="#" th:href="@{/loginform}">登录</a>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="container"> -->
+		
+	<div class="left"><!-- 左侧固定栏导航-->
+		<div class="left_item1">首页1</div>
+		<div class="left_item1">我的收藏</div>
+		<div class="left_item1">我的赞</div>				
+		<hr>
+		<div class="left_item1">热门微博</div>
+		<div class="left_item1">热门视频</div>
+		<hr>
+		<div class="left_scroll">
+			<div class="left_item1">最新微博</div>
+			<div class="left_item1">好友圈</div>
+			<div class="left_item1">特别关注</div>
+			<div class="left_item1">V+微博</div>
+			<div class="left_item1">朋友</div>
+			<div class="left_item1">娱乐明星</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="center">
+		<!-- 中间部分 -->
+		<div class="center_top">
+			<div>
+				<div class="center_top_wenzi">有什么新鲜事告诉大家？</div>
+				<!-- <a href="#" class="">硬核！高校用吊车帮学生搬行李，新生：太方便了>></a>
+					<a href="#" class="">热门微博</a> -->
+			</div>
+			<div class="center_top_search">
+				<!-- 搜索栏 -->
+				<!--<form action="#" method="post" th:action="@{/wb/insert}" th:object="${weibo}" id="myform">
+					&lt;!&ndash;th:field="*{com.jys.weibo.model.Weibo.wbContent}"&ndash;&gt;
+					&lt;!&ndash;th:object="${com.jys.weibo.model.Weibo}"&ndash;&gt;
+					<textarea rows="5" cols="56" th:field="*{wbContent}" ></textarea>
+				</form>-->
+
+			</div>
+			<div class="center_top_a">
+				<a href="#" class="">表情</a> <a href="#" class="">图片</a> <a href="#"
+					class="">视频</a> <a href="#" class="">话题</a> <a href="#" class="">头条文章</a>
+				<a href="#" class="">...</a>
+				<!-- <div> -->				
+			</div>
+		<!-- 	<div class="center_top_select_fxqx">
+					
+			</div> -->
+			<div class="center_top_button_fb_div">	
+				<select >
+					<option selected="selected">公开</option>
+					<option>好友圈</option>
+					<option>尽自己可见</option>
+					<option>群可见</option>
+				</select>		 
+				<input class="center_top_button_fb" type="submit" value="发布" />
+			</div>
+			
+			
+		</div>
+		<div class="center_center_dh">
+			<div class="center_center_dh_a">
+				<a href="#" class="">全部</a>
+				<a href="#" class="">原创</a>
+				<a href="#" class="">图片</a>
+				<a href="#" class="">视频</a>
+				<a href="#" class="">音乐</a>
+				<a href="#" class="">文章</a>
+			</div>
+			<div class="center_center_dh_search">
+				<input class="center_center_dh_input" type="text" placeholder="搜索我关注人的微博"></input> <input
+					class="center_center_dh_search_button" type="button"
+					style="float: left; width: 25px; height: 25px; border: 0; background: url(images/top_search_button.jpg) no-repeat" />
+			</div>
+		</div>
+		<div class="center_bottom_zynr">
+			<!--<div th:if="${not #lists.isEmpty(wblist)}">
+				<div th:each="wb : ${ wblist }">
+					<div class="center_bottom_zynr_div">
+						<img class="center_bottom_zynr_div_tx" src="images/jys_tx.jpg" alt="头像">
+						<div class="center_bottom_zynr_div_right">
+							<div class="center_bottom_zynr_div_name" th:text="${wb.wbUser.userName} ?:'发送时间'">我叫努力</div>
+							<div class="center_bottom_zynr_div_time" th:text="${wb.wbSendTime} ?:'发送时间'">发送时间</div>
+							<div class="center_bottom_zynr_div_content" th:text="${wb.wbContent} ?:'微博内容'">
+								微博内容
+							</div>
+							<div class="center_bottom_zynr_div_tx_image">
+								<img src="images/ball.jpg" alt="头像">
+							</div>
+						</div>
+						<hr style="color: gray;">
+						<div class="center_bottom_zynr_div_bottom">
+
+						</div>
+					</div>
+				</div>
+
+			</div>-->
+
+
+ <!--           <div class="center_bottom_zynr_div">
+                <img class="center_bottom_zynr_div_tx" src="images/jys_tx.jpg" alt="头像">
+                <div class="center_bottom_zynr_div_right">
+                    <div class="center_bottom_zynr_div_name">我叫努力</div>
+                    <div class="center_bottom_zynr_div_time">发送时间</div>
+                    <div class="center_bottom_zynr_div_content">
+                        【祝贺！湖北71人上榜“全国优秀教师和全国优秀教育工作者”，快来围观有没有你所熟悉的老师👨‍🏫👩‍🏫】在今年教师节来临之际，教育部对1432名全国优秀教师和158名全国优秀教育工作者进行表彰。其中，湖北有65人获得“全国优秀教师”称号，6人获“全国优秀教育工作者”称号。具体名单如下，向这些获奖者表示祝贺，向广大教育工作者表示衷心的感谢！
+                    </div>
+                    <div class="center_bottom_zynr_div_tx_image">
+                        <img  src="images/ball.jpg" alt="头像">
+                    </div>
+                </div>
+            </div>-->
+			<!--<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>	
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>	
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>	
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>			-->
+		</div>
+	</div>
+	<div class="right1">
+		<div class="longinform">
+			<div class="login_title">账号登录|安全登录</div>
+			<form href="#" th:action="@{/login}" th:object="${wbUser}" method="post">
+				<input class="login_input" type="text" placeholder="邮箱/会员账号/手机号"
+					   th:field="*{userName}"/>
+				<input class="login_input" type="password" placeholder="请输入密码"
+				th:field="*{userPassword}"/><br>
+				<input class="login_input_radio" type="radio"/><br>
+				<input class="login_input_submit" type="submit" value="登录">
+			</form>
+			<div class="login_bottom">还没有微博？立即注册</div>
+			<div class="login_bottom">其他登录</div>
+		</div>
+
+	</div>
+</body>
+</html>
+

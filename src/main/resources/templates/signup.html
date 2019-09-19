@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/signform.css" th:href="@{/css/signform.css}"/>
+</head>
+
+<body>
+<div class="div1">
+    <div class="left">
+        <div class="left_top">个人注册&nbsp;&nbsp;|&nbsp;&nbsp;官方注册</div>
+        <div class="form">
+        <div class="labelgroup">
+            <label>手机:</label><br>
+            <label>邮箱:</label><br>
+            <label>设置密码:</label><br>
+            <label>生日:</label><br>
+        </div>
+        <div class="inputgroup">
+            <form action="#" th:action="@{/signup}" th:object="${wbUser}" method="post">
+                <input type="tel" th:field="*{userTel}"/><br>
+                <input type="email" th:field="*{userEmail}"/><br>
+                <input type="password" th:field="*{userPassword}"/><br>
+                <input type="date" th:field="*{birthday}"/><br>
+                <input class="submitbutton" type="submit" value="立即注册"/>
+            </form>
+        </div>
+
+        <!--<form  action="#" th:action="@{/signup}" th:object="${wbUser}" method="post">
+            <label>手机:</label><input type="text" th:field="*{userTel}" /><br>
+            <label>邮箱:</label><input type="email" th:field="*{userEmail}" /><br>
+            <label>设置密码:</label><input type="password" th:field="*{userPassword}" /><br>
+            <label>生日:</label><input type="date" th:field="*{birthday}" /><br>
+            <input type="submit" value="立即注册"/>
+        </form>-->
+
+        </div>
+
+    </div>
+    <div class="right">
+
+    </div>
+
+</div>
+
+</body>
+</html>
+

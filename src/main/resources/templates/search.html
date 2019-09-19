@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/gtvg2.css" th:href="@{/css/search.css}"/>
+</head>
+
+<body>
+<div class="top">
+    <div class="hr"></div>
+    <div class="top2">
+        <img class="weibo-logo1" alt="logo" src="images/weibo-logo1.jpg">
+        <div class="top_search">
+            <input class="top_search_input" type="text"/> <input
+                class="top_search_button" type="button"
+                style="float: left; width: 30px; height: 30px; border: 0; background: url(images/top_search_button.jpg) no-repeat"/>
+        </div>
+        <div class="top_a_href">
+            <a class="top_img_shouye" href="#">首页</a> <a class="top_img_shipin"
+                                                         href="#">视频</a> <a class="top_img_find" href="#">发现</a> <a
+                class="top_img_game" href="#">游戏</a> <a class="top_img_username"
+                                                        href="#">用户名</a>
+            <div class="top_img_shuxian">|</div>
+            <a class="top_img_message" href="#" th:href="@{/signupform}">注册</a>
+            <a class="top_img_shezhi" href="#" th:href="@{/loginform}">登录</a>
+        </div>
+    </div>
+</div>
+<!-- <div class="container"> -->
+<div class="content">
+    <div class="center_search">
+        <img class="center_search_img" src="images/wbsearch.png">
+        <input class="center_search_input" type="text">
+        <input class="center_search_submit" type="button" value="搜索">
+    </div>
+    <div th:if="${not #lists.isEmpty(wblist)}">
+        <div th:each="wb : ${ wblist }">
+            <div class="wb_per">
+                <img class="center_bottom_zynr_div_tx" src="images/jys_tx.jpg" alt="头像">
+                <div class="center_bottom_zynr_div_right">
+                    <div class="center_bottom_zynr_div_time" th:text="${wb.wbSendTime} ?:'发送时间'">发送时间</div>
+                    <div class="center_bottom_zynr_div_content" th:text="${wb.wbContent} ?:'微博内容'">
+                        微博内容
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--<div class="center_bottom_zynr">
+        <div th:if="${not #lists.isEmpty(wblist)}">
+            <div th:each="wb : ${ wblist }">
+                <div class="wb_per">
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>
+<!--<div class="bottom">
+    <a href="#">asdfasd</a>
+</div>-->
+</body>
+</html>
+

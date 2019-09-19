@@ -1,0 +1,459 @@
+body{
+	background-color:white;
+	width:100%;
+	overflow:hidden;
+	text-align:center;
+	margin:0 auto;
+/*    margin:0 auto;
+    text-align:center;*/
+}
+a{ /* 所有链接去掉下划线 */
+	text-decoration:none;
+}
+
+/* 左側导航栏 begin */
+.left{/* 左侧栏 */
+	/*top:70px;
+	margin-left:110px;*/
+	background-color:#00ffff;
+	height:100%;
+	width:15%;
+	position:fixed;
+	align:center;
+    /*display: inline-block;*/
+}
+.left_item1{
+	margin-left:15px;
+	margin-top:20px;
+}
+.left_scroll{
+	overflow-y:auto; 
+	height:150px;
+}
+
+/* 左側导航栏 end */
+
+/* 中间部分 begin */
+.center{/* 中间部分*/
+	margin-top:64px;
+	margin-left:240px;
+	/* background-color:black; */
+	width:500px;
+	height:100%;
+	float:left;
+}
+
+.center_top{/* 中间部分的顶部 */	
+	background-color:white;
+	height:200px;
+	width:500px;
+	float:left;
+	border-radius:3px;/* 圆角 */
+}
+
+.center_top_wenzi{/* 有什么新鲜事告诉大家？ */
+	color:blue;
+	margin-top:10px;	
+	margin-left:10px;
+}
+/* .center_top_url1{
+	float:right;
+}
+.center_top_url2{
+	float:right;
+} */
+.center_top_search{
+	margin-top:5px;
+	margin-left:10px;
+}
+.center_top_a{/* 中间搜索框下边的按钮连接 */
+	width:250px;
+	margin-top:5px;
+	margin-left:10px;
+	float:left;
+}
+/* .center_top_select_fxqx{分享范围
+	float:right;	
+	
+} */
+.center_top_button_fb_div{/* 发送范围和发布按钮 */
+	float:right;
+	margin-right:10px;
+}
+.center_top_button_fb{/* 发布按钮 */
+	height:30px;
+	width:60px;
+	background-color:#FF4500;	
+}
+
+
+/* 中间的中间的导航栏 begin */
+.center_center_dh{/* 中间的中间的导航栏 */
+	margin-top:10px;
+	background-color:white;
+	height:40px;
+	width:500px;
+	float:left;
+	border-radius:3px;/* 圆角 */
+}
+.center_center_dh_a{ /* 里边的a标签 */
+	margin-top:10px;
+	margin-left:10px;
+	float:left;
+}
+	/* 搜索框 begin*/
+.center_center_dh_search{/* 页面中间的中间的导航栏的搜索框的div */
+	float:right;
+	margin-right:10px;
+	border:1px solid gray;
+	height:29px;
+	width:176px;
+	margin-top:8px;
+}
+.center_center_dh_input{/* 页面中间的中间的导航栏的搜索框的input */
+	border:none;
+	height:25px;
+	float:left;
+}
+
+	/* 搜索框 end*/
+/* 中间的中间的导航栏 end */
+
+/* 展示每一条微博的地方  begin*/
+.center_bottom_zynr{
+	margin-top:10px;
+	height:100%;
+	width:500px;
+	float:left;
+	background-color:white;
+}
+.center_bottom_zynr_div{
+	height:100%;
+	width:500px;
+	background-color:white;
+	margin-bottom: 10px;
+}
+.center_bottom_zynr_div_tx{
+	height: 40px;
+	width: 40px;
+	float:left;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+.center_bottom_zynr_div_right{
+	width: 420px;
+	height: 100%;
+	float:left;
+	/*margin-bottom:10px;*/
+}
+.center_bottom_zynr_div_name{
+	margin-top: 10px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+.center_bottom_zynr_div_time{
+	margin-left: 5px;
+	/*text-align: ;*/
+	color:gray;
+	font-size: 12px;
+}
+.center_bottom_zynr_div_content{
+    margin-top: 5px;
+    width: 420px;
+    height: 100%;
+}
+.center_bottom_zynr_div_tx_image{
+    margin-top: 5px;
+    width: 420px;
+    height: 100%;
+}
+.center_bottom_zynr_div_bottom{
+    float:left;
+}
+.center_bottom_zynr_item{
+	margin-bottom:10px;
+}
+/* 展示每一条微博的地方  end*/
+/* 中间部分 end */
+
+
+/* 右边栏 begin */
+.right{/* 右边栏 */	
+	margin-top:64px;
+	margin-left:10px;
+	margin-right:120px;
+	/* background-color:white; */
+	height:100%;
+	width:180px;
+	float:left;
+}
+.right_grxx{/* 个人信息 */
+	/* margin-top:30px; */
+	background-color:white;
+	/* height:130px; */
+	height:100%;
+	width:180px;
+	float:right;
+}
+.right_grxx_username{
+	text-align:center;
+}
+.right_grxx_xgxx{/* 相关信息 */
+	margin-left:30px;
+}
+.right_grxx_xgxx_a{ /* a标签 */
+	float:left
+}
+.right_grxx_xgxx_gz{ /* 关注数 */	
+	float:left;
+}
+.right_grxx_xgxx_fs{/* 粉丝数 */
+	margin-left:10px;
+	float:left;
+}
+.right_grxx_xgxx_wb{/* 微博数 */
+	margin-left:10px;
+	float:left;
+}
+
+
+.right_book{/* 热门好书 */
+	margin-top:10px;
+	/* background-color:red; */
+	height:220px;
+	width:180px;
+	float:right;
+}
+.right_rmht{/* 热门话题 */
+	margin-top:10px;
+	/* background-color:red; */
+	height:120px;
+	width:180px;
+	float:right;
+}
+
+.right_hygzdt{/* 好友关注动态 */
+	margin-top:10px;
+	/* background-color:red; */
+	height:100%;
+	width:180px;
+	float:right;
+}
+.right_hyzq{/* 会员专区 */
+	margin-top:10px;
+	/* background-color:red; */
+	height:100%;
+	width:180px;
+	float:right;
+}
+
+.right_ggl{/* 公告栏 */
+	margin-top:10px;
+	/* background-color:red; */
+	height:120px;
+	width:180px;
+	float:right;
+}
+/* 右边栏 end */
+
+/*
+home1*/
+.right1{
+    margin-top:64px;
+    margin-left:10px;
+    margin-right:120px;
+     background-color:white;
+    height:100%;
+    width:300px;
+    float:left;
+}
+.longinform{
+    width: 280px;
+    height: 300px;
+    text-align: center;
+    margin-top:20px;
+    margin-left:10px;
+    /*border:solid darkgray 1px;*/
+    background-color: papayawhip;
+
+}
+.login_title{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.login_input{
+    width: 240px;
+    height: 28px;
+    margin-top: 10px;
+
+}
+.login_input_radio{
+    text-align: left;
+}
+.login_input_submit{
+    width: 240px;
+    height: 28px;
+    margin-top: 10px;
+    background-color:#FF9900;
+    color:white;
+}
+.login_bottom{
+    text-align: left;
+    margin-left:20px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.file {
+	position: relative;
+	display: inline-block;
+	background: #D0EEFF;
+	border: 1px solid #99D3F5;
+	border-radius: 4px;
+	padding: 4px 12px;
+	overflow: hidden;
+	color: #1E88C7;
+	text-decoration: none;
+	text-indent: 0;
+	line-height: 20px;
+}
+.file input {
+	position: absolute;
+	font-size: 100px;
+	right: 0;
+	top: 0;
+	opacity: 0;
+}
+.file:hover {
+	background: #AADFFD;
+	border-color: #78C3F3;
+	color: #004974;
+	text-decoration: none;
+}
+
+/* 所有顶部 固定的部分 begin*/
+/*
+.top{
+	top:0px;
+	left:0px;
+	bottom:500px;
+	height:53px;
+	width:100%;
+	background-color:white;
+	position:fixed;
+}
+!* 最顶部横线 *!
+.hr{
+	top:0px;
+	height:3px;
+	width:100%;
+	background-color:#FF4500;
+}
+.top2{!*上边栏*!
+	height:60px;
+	background-color:white;
+}
+.weibo-logo1{
+	margin-left:118px;
+	float:left;
+}
+
+!* 顶部搜索框 *!
+.top_search{
+	border:1px solid gray;
+	height:34px;
+	width:178px;
+	margin-top:8px;
+	margin-left:45px;
+	float:left;
+}
+
+.top_search_input{!* 顶部搜索输入框 *!
+	border:none;
+	height:30px;
+	float:left;
+	background-color: aliceblue;
+}
+!* 顶部搜索框  end*!
+
+!* 顶部导航 begin *!
+.top_a_href{
+	float:left;
+	height:50px;
+	margin-top:10px;
+	margin-left:80px;
+}
+.top_img_shouye{
+	float:left;
+	margin-left:25px;
+}
+.top_img_shipin{
+	float:left;
+	margin-left:25px;
+}
+.top_img_find{
+	float:left;
+	margin-left:25px;
+}
+.top_img_game{
+	float:left;
+	margin-left:25px;
+}
+.top_img_username{
+	float:left;
+	margin-left:25px;
+}
+.top_img_shuxian{
+	float:left;
+	margin-left:25px;
+	background-color: #FF4500;
+}
+.top_img_message{
+	float:left;
+	margin-left:25px;
+	!*background-color: #FF4500;*!
+}
+.top_img_shezhi{
+	float:left;
+	margin-left:25px;
+}
+!*消息和设置的下拉菜单*!
+ ul > li:hover ul {
+	left: 0;
+}
+ li ul {
+	position: absolute;
+	left: -9999em;
+	top: 36px;
+	 z-index: 1;
+}
+ li ul a:hover {
+	background: rgba(0, 0, 0, 0.2);
+}
+li{
+	list-style-type:none;
+}
+ ul > li {
+	float: right;
+	position: relative;
+
+}
+ul,li{padding:0;margin:0;}
+
+.top_img_message a{
+	padding: 10px 20px;
+}
+.top_img_shezhi a{
+	padding: 10px 20px;
+}
+.xlk{
+	background-color: white;
+	border:gray solid;
+	width: 100px;
+}
+*/
+
+/* 顶部导航 end */
+
+/* 所有顶部 固定的部分 end*/

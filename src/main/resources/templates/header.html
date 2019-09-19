@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/gtvg2.css" th:href="@{/css/header.css}" />
+</head>
+<body>
+<div th:fragment="copy">
+    <!--<div class="hr"></div>-->
+    <div class="top" id="top">
+        <!--<div class="top2">-->
+            <img class="weibo-logo1" alt="logo" src="images/weibo-logo1.jpg">
+            <div class="top_search">
+                <input class="top_search_input" id="search" type="text"/>
+                <input
+                    class="top_search_button" type="button" onclick="searchWb()"
+                    style=" width: 30px; height: 30px; border: 0; background: url(images/top_search_button.jpg) no-repeat" />
+            </div><!--float: left;-->
+            <div class="top_a_href">
+                <a class="top_img_shouye" href="#">首页</a> <a class="top_img_shipin"
+                                                             href="#">视频</a> <a class="top_img_find" href="#">发现</a> <a
+                    class="top_img_game" href="#">游戏</a> <a class="top_img_username"
+                                                            href="#">用户名</a>
+                <div class="top_img_shuxian">|</div>
+
+                <ul class="top_img_message">
+                    <li>
+                        <a href="#">消息</a>
+                        <ul>
+                            <li><a href="#">Subnav Item</a></li>
+                            <li><a href="#">Subnav Item</a></li>
+                            <li><a href="#">Subnav Item</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="top_img_shezhi">
+                    <li>
+                        <a  href="#">设置</a>
+                        <ul class="xlk">
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#">Item</a></li>
+                            <li><a href="#" th:href="@{/loginout}">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </div>
+        <!--</div>-->
+    </div>
+</div>
+
+</body>
+<script>
+
+</script>
+</html>

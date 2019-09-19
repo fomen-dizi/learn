@@ -1,0 +1,32 @@
+[12:04:53:663] [INFO] - l - Starting WeiboApplication on WIN-6KC8R66AA59 with PID 24136 (E:\weibo\target\classes started by Administrator in E:\weibo)
+[12:04:53:682] [INFO] - l - No active profile set, falling back to default profiles: default
+[12:04:55:132] [INFO] - l - Multiple Spring Data modules found, entering strict repository configuration mode!
+[12:04:55:132] [INFO] - l - Bootstrapping Spring Data repositories in DEFAULT mode.
+[12:04:55:290] [INFO] - l - Finished Spring Data repository scanning in 134ms. Found 1 repository interfaces.
+[12:04:55:308] [INFO] - l - Multiple Spring Data modules found, entering strict repository configuration mode!
+[12:04:55:308] [INFO] - l - Bootstrapping Spring Data repositories in DEFAULT mode.
+[12:04:55:355] [INFO] - l - Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.jys.weibo.repository.AyUserRepository.
+[12:04:55:355] [INFO] - l - Finished Spring Data repository scanning in 31ms. Found 0 repository interfaces.
+[12:04:56:010] [INFO] - l - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[12:04:56:443] [INFO] - l - Tomcat initialized with port(s): 8080 (http)
+[12:04:56:443] [INFO] - l - Initializing ProtocolHandler ["http-nio-8080"]
+[12:04:56:443] [INFO] - l - Starting service [Tomcat]
+[12:04:56:443] [INFO] - l - Starting Servlet engine: [Apache Tomcat/9.0.22]
+[12:04:56:628] [INFO] - l - Initializing Spring embedded WebApplicationContext
+[12:04:56:628] [INFO] - l - Root WebApplicationContext: initialization completed in 2811 ms
+[12:04:57:414] [INFO] - l - {dataSource-1} inited
+[12:04:57:762] [INFO] - l - HHH000412: Hibernate Core {5.4.4.Final}
+[12:04:57:916] [INFO] - l - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+[12:04:58:116] [INFO] - l - HHH000400: Using dialect: org.hibernate.dialect.MySQL55Dialect
+[12:04:58:885] [INFO] - l - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[12:04:58:890] [INFO] - l - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[12:04:59:851] [INFO] - l - Starting without optional epoll library
+[12:04:59:851] [INFO] - l - Starting without optional kqueue library
+[12:05:01:249] [INFO] - l - ServletCOntext上下文初始化
+[12:05:01:249] [INFO] - l - 缓存中的用户数有：3 人
+[12:05:01:498] [WARN] - l - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[12:05:01:831] [INFO] - l - Initializing ExecutorService 'applicationTaskExecutor'
+[12:05:02:301] [WARN] - l - [THYMELEAF][main] Template Mode 'HTML5' is deprecated. Using Template Mode 'HTML' instead.
+[12:05:03:134] [INFO] - l - Starting ProtocolHandler ["http-nio-8080"]
+[12:05:03:157] [INFO] - l - Tomcat started on port(s): 8080 (http) with context path ''
+[12:05:03:157] [INFO] - l - Started WeiboApplication in 10.008 seconds (JVM running for 12.426)

@@ -1,0 +1,81 @@
+body{
+    height: 500px;
+    background-color:#0099ff;
+    overflow-y:auto;
+    /*text-align:center;*/
+    /*background-color:red;*/
+}
+.div1{
+    margin-top: 15%;
+    margin-left: 13%;
+    margin-right: 13%;
+    background-color:white;
+    position: relative;
+    /*margin: 0 auto;*/
+    border-radius: 5px;
+    height: 460px;
+}
+.left_top{
+    margin-top: 25px;
+    margin-left: 30px;
+    font-size: 20px;
+}
+.left{
+    width: 70%;
+    height: 100%;
+    float: left;
+   /* background-color:yellow;*/
+    border-radius: 5px;
+}
+
+.right{
+    height: 100%;
+    width: 70%;
+   /* background-color:green;*/
+}
+.form{
+    margin-top: 50px;
+    margin-left: 80px;
+}
+.labelgroup{
+    float:left;
+    /*display:inline-block;*/
+    /*min-width: 100px;*/
+}
+label{
+    float: right;
+    margin-bottom: 15px;
+    height:25px;
+}
+.inputgroup{
+    float: left;
+    margin-left: 10px;
+}
+input{
+    margin-bottom: 10px;
+    height:25px;
+    width:180px;
+    border-radius: 3px;
+}
+
+.submitbutton{
+    background-color:#FF9900;
+    height:40px;
+    width:180px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+/*.label{
+    float:left;
+    display:inline-block;
+}*/
+/*
+label{
+    display: inline-block;
+    min-width: 100px;!*或者 width: 100px;*!
+    text-align: right;
+    margin-right: 30px;
+}
+
+*/

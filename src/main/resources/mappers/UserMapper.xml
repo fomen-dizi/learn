@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jys.weibo.dao.WbUserDao">
+    <resultMap id="usermap" type="com.jys.weibo.model.WbUser">
+        <id column="user_id" property="id"/>
+        <result column="user_password" property="userPassword"/>
+        <result column="user_name" property="userName"/>
+        <result column="user_sex" property="userSex"/>
+        <result column="birthday" property="birthday"/>
+        <result column="createtime" property="createtime"/>
+        <result column="school" property="school"/>
+        <result column="user_type" property="userType"/>
+        <result column="user_image" property="userImage"/>
+        <result column="user_tel" property="userTel"/>
+        <result column="user_email" property="userEmail"/>
+        <result column="user_descriptor" property="userDescriptor"/>
+    </resultMap>
+    <select id="findUserById" resultMap="usermap">
+        select * from wb_user where user_id =#{userId};
+    </select>
+
+
+    <insert id="insertUser" parameterType="com.jys.weibo.model.WbUser" useGeneratedKeys="true"
+            keyColumn="user_id" keyProperty="id">
+        insert into wb_user (user_password,user_name,user_sex, birthday,createtime,school
+        ,user_type,user_image,user_tel,user_email,user_descriptor)
+        values(#{userPassword},#{userName},#{userSex},#{birthday},#{createtime}
+        ,#{school},#{userType},#{userImage},#{userTel},#{userEmail},#{userDescriptor});
+
+       <!-- <selectKey resultType="int" keyProperty="userId" order="AFTER">
+            select last_insert_id()
+        </selectKey>-->
+    </insert>
+
+    <select id="findUserByEmailOrNameOrTel" resultMap="usermap">
+        select * from wb_user where user_name = #{userName} and user_password = #{userPassword};
+        <!--<choose>
+            <when test="userEmail != null">
+                or user_email = #{userEmail}
+            </when>
+            <when test="userName != null">
+                or user_name = #{userName}
+            </when>
+            <when test="userTel != null">
+                or user_tel=#{userTel}
+            </when>
+            <otherwise>
+                ) and user_password = #{userPassword};
+            </otherwise>
+        </choose>-->
+
+    </select>
+</mapper>
+

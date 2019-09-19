@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>微博</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="../../css/gtvg2.css" th:href="@{/css/home.css}" />
+	<link rel="stylesheet" type="text/css" media="all"
+		  href="../../css/gtvg2.css" th:href="@{/css/header.css}" />
+</head>
+
+<body>
+<!--	<div th:insert="~{header :: copy}">
+
+	</div>-->
+	<!--<div class="hr"></div>-->
+	<div class="top" id="top">
+		<!--<div class="top2">-->
+		<img class="weibo-logo1" alt="logo" src="images/wbsearch_img_50.png">
+		<div class="top_search">
+			<input class="top_search_input" id="search" type="text"/>
+			<input
+					class="top_search_button" type="button" onclick="searchWb()"
+					style=" width: 30px; height: 30px; border: 0; background: url(images/top_search_button.jpg) no-repeat" />
+		</div><!--float: left;-->
+		<div class="top_a_href">
+			<a class="top_img_shouye" href="#">首页</a> <a class="top_img_shipin"
+														 href="#">视频</a> <a class="top_img_find" href="#">发现</a> <a
+				class="top_img_game" href="#">游戏</a> <a class="top_img_username"
+														href="#">用户名</a>
+			<div class="top_img_shuxian">|</div>
+
+			<ul class="top_img_message">
+				<li>
+					<a href="#">消息</a>
+					<ul>
+						<li><a href="#">Subnav Item</a></li>
+						<li><a href="#">Subnav Item</a></li>
+						<li><a href="#">Subnav Item</a></li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="top_img_shezhi">
+				<li>
+					<a  href="#">设置</a>
+					<ul class="xlk">
+						<li><a href="#">Item</a></li>
+						<li><a href="#">Item</a></li>
+						<li><a href="#" th:href="@{/loginout}">退出</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+		<!--</div>-->
+	</div>
+	</div>
+	<!-- <div class="container"> -->
+		
+	<div class="left"><!-- 左侧固定栏导航-->
+		<div class="left_item1">首页1</div>
+		<div class="left_item1">我的收藏</div>
+		<div class="left_item1">我的赞</div>				
+		<hr>
+		<div class="left_item1">热门微博</div>
+		<div class="left_item1">热门视频</div>
+		<hr>
+		<div class="left_scroll">
+			<div class="left_item1">最新微博</div>
+			<div class="left_item1">好友圈</div>
+			<div class="left_item1">特别关注</div>
+			<div class="left_item1">V+微博</div>
+			<div class="left_item1">朋友</div>
+			<div class="left_item1">娱乐明星</div>
+		</div>
+	</div>
+	
+	
+	
+	<!--<div class="center">
+		&lt;!&ndash; 中间部分 &ndash;&gt;
+		<div class="center_top">
+			<div>
+				<div class="center_top_wenzi">有什么新鲜事告诉大家？</div>
+				&lt;!&ndash; <a href="#" class="">硬核！高校用吊车帮学生搬行李，新生：太方便了>></a>
+					<a href="#" class="">热门微博</a> &ndash;&gt;
+			</div>
+			<div class="center_top_search">
+				&lt;!&ndash; 搜索栏 &ndash;&gt;
+				<form action="#" method="post" th:action="@{/wb/insert}" th:object="${weibo}" id="myform" enctype="multipart/form-data">
+					&lt;!&ndash;th:field="*{com.jys.weibo.model.Weibo.wbContent}"&ndash;&gt;
+					&lt;!&ndash;th:object="${com.jys.weibo.model.Weibo}"&ndash;&gt;
+					<textarea rows="5" cols="56" th:field="*{wbContent}" ></textarea>
+				</form>
+
+			</div>
+			<div class="center_top_a">
+				<a href="#" class="">表情</a>
+				&lt;!&ndash;<a href="#" class="" th:href="@{/uploadimg}">图片</a>&ndash;&gt;
+				<div class="file">图片
+					<input form="myform" th:field="${weibo.file}" id="fileID" class="xzwj" type="file"
+                           accept="image/jpg,image/jpeg,image/png,image/gif"  multiple="multiple" value="图片">
+				</div>
+                &lt;!&ndash;<input type="button" id="btn"/>&ndash;&gt;
+                <div class="file">视频
+                    <input form="myform" th:field="${weibo.file1}" id="video" class="xzwj" type="file"
+                           accept=".mpg,.m4v,.mp4,.flv,.3gp,.mov,.avi,.rmvb,.mkv,.wmv"  multiple="multiple" value="视频">
+                </div>
+				<a href="#" class="">话题</a>
+				<a href="#" class="">头条文章</a>
+				<a href="#" class="">...</a>
+				&lt;!&ndash; <div> &ndash;&gt;
+			</div>
+		&lt;!&ndash; 	<div class="center_top_select_fxqx">
+					
+			</div> &ndash;&gt;
+			<div class="center_top_button_fb_div">	
+				<select >
+					<option selected="selected">公开</option>
+					<option>好友圈</option>
+					<option>尽自己可见</option>
+					<option>群可见</option>
+				</select>		 
+				<input class="center_top_button_fb" type="submit" value="发布" form="myform"/>
+			</div>
+			
+			
+		</div>
+		<div class="center_center_dh">
+			<div class="center_center_dh_a">
+				<a href="#" class="">全部</a>
+				<a href="#" class="">原创</a>
+				<a href="#" class="">图片</a>
+				<a href="#" class="">视频</a>
+				<a href="#" class="">音乐</a>
+				<a href="#" class="">文章</a>
+			</div>
+			<div class="center_center_dh_search">
+				<input class="center_center_dh_input" type="text" placeholder="搜索我关注人的微博"></input> <input
+					class="center_center_dh_search_button" type="button"
+					style="float: left; width: 25px; height: 25px; border: 0; background: url(images/top_search_button.jpg) no-repeat" />
+			</div>
+		</div>
+		<div class="center_bottom_zynr">
+			<div th:if="${not #lists.isEmpty(wblist)}">
+				<div th:each="wb : ${ wblist }">
+					<div class="center_bottom_zynr_div">
+						<img class="center_bottom_zynr_div_tx" src="" alt="头像">
+						<div class="center_bottom_zynr_div_right">
+							<div class="center_bottom_zynr_div_name" th:text="${wb.wbUser.userName} ?:'发送时间'">我叫努力</div>
+							<div class="center_bottom_zynr_div_time" th:text="${wb.wbSendTime} ?:'发送时间'">发送时间</div>
+							<div class="center_bottom_zynr_div_content" th:text="${wb.wbContent} ?:'微博内容'">
+								微博内容
+							</div>
+                            <div th:if="${wb.wbImagePath} != null">
+                                <div class="center_bottom_zynr_div_tx_image">
+                                    &lt;!&ndash;<img src="" th:attr="src=@{/queryPic/{address}(address=*{wb.wbImagePath})}" alt="图片">&ndash;&gt;
+                                    <img th:src="@{/queryPic/1/{address}(address=${wb.id})}">
+                                </div>
+                            </div>
+                            <div th:if="${wb.wbVideoPath} != null">
+                                <div class="center_bottom_zynr_div_tx_image">
+                                    &lt;!&ndash;<img src="" th:attr="src=@{/queryPic/{address}(address=*{wb.wbImagePath})}" alt="图片">&ndash;&gt;
+                                    <video th:src="@{/queryPic/2/{address}(address=${wb.id})}" width="420" height="300" controls/>
+                                </div>
+                            </div>
+						</div>
+						<hr style="color: gray;">
+						<div class="center_bottom_zynr_div_bottom">
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+
+ &lt;!&ndash;           <div class="center_bottom_zynr_div">
+                <img class="center_bottom_zynr_div_tx" src="images/jys_tx.jpg" alt="头像">
+                <div class="center_bottom_zynr_div_right">
+                    <div class="center_bottom_zynr_div_name">我叫努力</div>
+                    <div class="center_bottom_zynr_div_time">发送时间</div>
+                    <div class="center_bottom_zynr_div_content">
+                        【祝贺！湖北71人上榜“全国优秀教师和全国优秀教育工作者”，快来围观有没有你所熟悉的老师👨‍🏫👩‍🏫】在今年教师节来临之际，教育部对1432名全国优秀教师和158名全国优秀教育工作者进行表彰。其中，湖北有65人获得“全国优秀教师”称号，6人获“全国优秀教育工作者”称号。具体名单如下，向这些获奖者表示祝贺，向广大教育工作者表示衷心的感谢！
+                    </div>
+                    <div class="center_bottom_zynr_div_tx_image">
+                        <img  src="images/ball.jpg" alt="头像">
+                    </div>
+                </div>
+            </div>&ndash;&gt;
+			&lt;!&ndash;<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>	
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>	
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>	
+			<div>
+				<img class="center_bottom_zynr_item" alt="weibo" src="images/weibo_item1.png">
+			</div>			&ndash;&gt;
+		</div>
+	</div>-->
+	<!--<div class="right">
+		<div class="right_grxx">
+			<div class="right_grxx_tx">
+				<img alt="头像" src="images/user_tx.png">
+			</div>
+			<div class="right_grxx_username">				
+				<a href="#">我叫努力</a>
+			</div>
+			<div class="right_grxx_xgxx">
+				<div class="right_grxx_xgxx_gz">
+					<a class="right_grxx_xgxx_a" href="#">59</a>
+					<div>关注</div>
+				</div>
+				
+				
+				<div class="right_grxx_xgxx_fs">
+					<a href="#">59</a>
+					<div>粉丝</div>					
+				</div>
+				
+				
+				<div class="right_grxx_xgxx_wb">
+					<a href="#">59</a>
+					<div>微博</div>					
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="right_book">
+			<img alt="好书" src="images/rm_book.png">
+		</div>
+		<div class="right_hygzdt">
+			<img alt="好友关注动态" src="images/friend_gz_topic.png">
+		</div>
+		<div class="right_hyzq">
+			<img alt="会员专区" src="images/hyzq.png">
+		</div>
+		<div class="right_ggl">
+			<img alt="公告栏" src="images/gg_item.png">
+		</div>
+	</div>-->
+
+	<!-- </div> -->
+
+</body>
+<script>
+    debugger;
+    var winWidth = window.screen.availWidth;
+    // alert(winWidth);
+    document.getElementById("top").style.width=winWidth+"px";
+
+	function searchWb() {
+		var name=document.getElementById('search').value;
+        window.location.href ="/search?name="+name;
+		// alert(name);
+        // var xhr=new XMLHttpRequest();
+        // alert(xhr.responseText);
+        // xhr.onreadystatechange=function(){
+        //     if(xhr.readyState==4){
+        //         var data = xhr.responseText;
+        //         alert(data);
+		// 	}
+		// };
+        // xhr.open('get','/search?title='+name);
+        // xhr.send(null);
+        // if(data != null){
+        //     // window.location.href ="/search1?data="+data;
+        //     xhr.open('post','/search1');
+        //     // 如果想要使用post提交数据,必须添加此行
+        //     xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        //     xhr.send('data=data');
+        // }
+    }
+    document.getElementById("btn").onclick=function() {
+	    debugger;
+        if (document.getElementById("fileID").value == "") {
+            alert("请上传附件");
+        }
+    }
+</script>
+</html>
+

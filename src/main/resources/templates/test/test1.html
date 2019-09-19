@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <style>
+        .nav1 ul > li:hover ul {
+            left: 0;
+        }
+        .nav1 li ul {
+            position: absolute;
+            left: -9999em;
+            top: 36px;
+
+        }
+        .nav1 li {
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="nav nav1">
+
+        <a href="#">Nav Item</a>
+        <ul>
+            <li><a href="#">Subnav Item</a></li>
+        </ul>
+
+
+    <ul>
+        <li>
+            <a href="#">Nav Item</a>
+            <ul>
+                <li><a href="#">Subnav Item</a></li>
+                <li><a href="#">Subnav Item</a></li>
+                <li><a href="#">Subnav Item</a></li>
+            </ul>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a href="#">Nav Item</a>
+            <ul>
+                <li><a href="#">Subnav Item</a></li>
+                <li><a href="#">Subnav Item</a></li>
+                <li><a href="#">Subnav Item</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+</body>
+</html>

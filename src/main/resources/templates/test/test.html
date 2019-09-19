@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<form action="#" th:action="@{/test/testSubmit}" th:object="${weibo}" method="post">
+    <input type="text" th:field="*{wbId}" />
+    <input type="submit" />
+</form>
+</body>
+</html>

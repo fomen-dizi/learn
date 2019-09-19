@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jys.weibo.dao.WbDao">
+    <!--自定义映射-->
+    <resultMap id="wbmap" type="com.jys.weibo.model.Weibo">
+        <id column="wb_id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result column="wb_type" property="wbType"/>
+        <result column="wb_sendtime" property="wbSendTime"/>
+        <result column="wb_createtime" property="wbCreateTime"/>
+        <result column="wb_modifytime" property="wbModifyTime"/>
+        <result column="wb_image_id" property="wbImageId"/>
+        <result column="wb_video_id" property="wbVideoId"/>
+        <result column="wb_music_id" property="wbMusicId"/>
+        <result column="wb_content" property="wbContent"/>
+        <result column="wb_comment_id" property="wbCommentId"/>
+        <result column="wb_comment_cnt" property="wbCommentCnt"/>
+        <result column="wb_zan_cnt" property="wbZanCnt"/>
+        <result column="wb_zf_cnt" property="wbZfCnt"/>
+        <result column="wb_sc_cnt" property="wbScCnt"/>
+        <result column="wb_look_cnt" property="wbLookCnt"/>
+        <result column="wb_image_path" property="wbImagePath"/>
+        <result column="wb_video_path" property="wbVideoPath"/>
+        <association property="wbUser" column="user_id"
+                     select="com.jys.weibo.dao.WbUserDao.findUserById"/>
+    </resultMap>
+    <insert id="insertWb" parameterType="com.jys.weibo.model.Weibo">
+        insert into weibo
+        (wb_id,user_id,wb_type,wb_sendtime,wb_createtime,wb_modifytime,
+        wb_image_id ,wb_video_id,wb_music_id,wb_content,wb_comment_id,wb_comment_cnt,wb_zan_cnt,
+        wb_zf_cnt,wb_sc_cnt,wb_look_cnt,wb_image_path,wb_video_path)
+
+        values (#{id},#{userId},#{wbType},#{wbSendTime},#{wbCreateTime},#{wbModifyTime}
+        ,#{wbImageId},#{wbVideoId},#{wbMusicId},#{wbContent},#{wbCommentId},#{wbCommentCnt},#{wbZanCnt},
+        #{wbZfCnt},#{wbScCnt},#{wbLookCnt},#{wbImagePath},#{wbVideoPath})
+    </insert>
+    
+    <select id="findAllWb" resultMap="wbmap">
+        /*select a.wb_content,b.user_name from weibo a inner join wb_user b
+        on a.user_id = b.user_id;*/
+        select * from weibo;
+    </select>
+
+    <select id="findImagePathById" parameterType="int" resultType="String">
+        select wb_image_path as wbImagePath from weibo where wb_id = #{id}
+    </select>
+
+    <select id="findVideoPathById" parameterType="int" resultType="String">
+        select wb_video_path as wbVideoPath from weibo where wb_id = #{id}
+    </select>
+</mapper>
+
